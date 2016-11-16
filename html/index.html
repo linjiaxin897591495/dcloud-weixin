@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+	<div class="mui-content">
+	    <ul class="mui-table-view">
+	    	 <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="田">
+	                <img class="mui-media-object mui-pull-left" src="../images/friends/tp4.jpg">
+	                <div class="mui-media-body">
+	                   宋老师
+	                    <p class="mui-ellipsis">OK?</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="木屋">
+	                <img class="mui-media-object mui-pull-left" src="../images/friends/tp24.jpg">
+	                <div class="mui-media-body">
+	                   	班主任	
+	                    <p class="mui-ellipsis">真的，就是这样。</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="煞笔">
+	                <img class="mui-media-object mui-pull-left" src="../images/friends/tp8.jpg">
+	                <div class="mui-media-body">
+	                   梅老师
+	                    <p class="mui-ellipsis">同学们认真听课</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="田">
+	                <img class="mui-media-object mui-pull-left" src="../images/index_avatar1.jpg">
+	                <div class="mui-media-body">
+	                    田
+	                    <p class="mui-ellipsis">nice</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="木屋">
+	                <img class="mui-media-object mui-pull-left" src="../images/index_avatar2.jpg">
+	                <div class="mui-media-body">
+	                   	 高俊峰	
+	                    <p class="mui-ellipsis">好</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="煞笔">
+	                <img class="mui-media-object mui-pull-left" src="../images/index_avatar3.jpg">
+	                <div class="mui-media-body">
+	                     梁哥
+	                    <p class="mui-ellipsis">来呀，互相伤害啊</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="田">
+	                <img class="mui-media-object mui-pull-left" src="../images/friends/tp4.jpg">
+	                <div class="mui-media-body">
+	                   吴总
+	                    <p class="mui-ellipsis">今晚加班</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;" title="木屋">
+	                <img class="mui-media-object mui-pull-left" src="../images/friends/tp24.jpg">
+	                <div class="mui-media-body">
+	                   	小小	
+	                    <p class="mui-ellipsis">嗯。</p>
+	                </div>
+	            </a>
+	        </li>
+	    </ul>
+	</div>
+<script type="text/javascript">
+mui(".mui-media").on("tap","a",function(){
+	var titleName=this.getAttribute("title");
+	mui.openWindow({
+		url:"index_chat.html",
+		id:"index_chat.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		},
+		waiting:{
+			autoShow:true,
+			title:"loading.."
+		},
+		extras:{
+			title:titleName
+		}
+	});
+});
+</script>
+</html>

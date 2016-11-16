@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link href="../css/mui.indexedlist.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/common.css">
+<style>
+	html,
+	body {
+		height: 100%;
+		overflow: hidden;
+	}
+	.mui-bar {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.find-top{
+		height: 50px;
+		font-size: 15px;
+		padding: 7px 15px;
+		line-height: 25px;
+	}
+	.img{
+		width: 70px;
+	}
+	.mui-indexed-list-bar{
+      background-color: white;
+      
+	}
+	
+</style>
+</head>
+
+<body>
+<div class="mui-content">
+	<div id='list' class="mui-indexed-list">
+		<div class="mui-indexed-list-search mui-input-row mui-search">
+			<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索">
+		</div>
+		<div class="mui-indexed-list-bar">
+			<a>A</a>
+			<a>B</a>
+			<a>D</a>
+			<a>J</a>
+			<a>L</a>
+			<a>M</a>
+			<a>S</a>
+			<a>T</a>
+			<a>V</a>
+			<a>W</a>
+			<a>X</a>
+			<a>Y</a>
+		</div>
+		<div class="mui-indexed-list-alert"></div>
+		<div class="mui-indexed-list-inner">
+			<div class="mui-indexed-list-empty-alert">没有数据</div>
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media find-top">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left img" src="../images/a_b.png"/>
+			            <div class="mui-media-body content">新的朋友</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media find-top">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../images/a_j.png"/>
+			            <div class="mui-media-body content">群聊</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media find-top">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../images/biaoqian.png"/>
+			            <div class="mui-media-body content">标签
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media find-top">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="../images/a_h.png"/>
+			            <div class="mui-media-body content">公众号
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			<ul class="mui-table-view">
+				<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp3.jpg">
+				            <div class="mui-media-body content">安吉</div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="B" class="mui-table-view-divider mui-indexed-list-group">B</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp4.jpg">
+				            <div class="mui-media-body content">班主任</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp5.jpg">
+				            <div class="mui-media-body content">Bieber</div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="D" class="mui-table-view-divider mui-indexed-list-group">D</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp6.jpg">
+				            <div class="mui-media-body content">大宝</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp7.jpg">
+				            <div class="mui-media-body content">大嫂</div>
+				        </a>
+				    </li>
+				</ul>
+				
+				<li data-group="J" class="mui-table-view-divider mui-indexed-list-group">J</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp8.jpg">
+				            <div class="mui-media-body content">Jack</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp9.jpg">
+				            <div class="mui-media-body content">姐姐</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp10.jpg">
+				            <div class="mui-media-body content">金姐</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp11.jpg">
+				            <div class="mui-media-body content">金星</div>
+				        </a>
+				    </li>
+				    </li><li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp12.jpg">
+				            <div class="mui-media-body content">Joe</div>
+				        </a>
+				    </li>
+				    </li><li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp13.jpg">
+				            <div class="mui-media-body content">John</div>
+				        </a>
+				    </li>
+				</ul>
+				
+				<li data-group="L" class="mui-table-view-divider mui-indexed-list-group">L</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp1.jpg">
+				            <div class="mui-media-body content">梁哥</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp2.jpg">
+				            <div class="mui-media-body content">Lily</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp14.jpg">
+				            <div class="mui-media-body content">铃木</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp15.jpg">
+				            <div class="mui-media-body content">Lucy</div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="M" class="mui-table-view-divider mui-indexed-list-group">M</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp16.jpg">
+				            <div class="mui-media-body content">梅老师</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp17.jpg">
+				            <div class="mui-media-body content">梅子</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp18.jpg">
+				            <div class="mui-media-body content">Michael</div>
+				        </a>
+				    </li>
+				</ul>
+				
+				<li data-group="S" class="mui-table-view-divider mui-indexed-list-group">S</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/index_avatar4.jpg">
+				            <div class="mui-media-body content">三秋树</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp19.jpg">
+				            <div class="mui-media-body content">宋老师</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp20.jpg">
+				            <div class="mui-media-body content">CBD
+				            </div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="T" class="mui-table-view-divider mui-indexed-list-group">T</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/index_avatar1.jpg">
+				            <div class="mui-media-body content">田</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp21.jpg">
+				            <div class="mui-media-body content">田中先生</div>
+				        </a>
+				    </li>
+				</ul>
+				
+				<li data-group="V" class="mui-table-view-divider mui-indexed-list-group">V</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp22.jpg">
+				            <div class="mui-media-body content">Venus</div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="W" class="mui-table-view-divider mui-indexed-list-group">W</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp2.jpg">
+				            <div class="mui-media-body content">王生</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp23.jpg">
+				            <div class="mui-media-body content">吴总</div>
+				        </a>
+				    </li>
+				</ul>
+				<li data-group="X" class="mui-table-view-divider mui-indexed-list-group">X</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp24.jpg">
+				            <div class="mui-media-body content">肖丽姐 </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp25.jpg">
+				            <div class="mui-media-body content">小南</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp26.jpg">
+				            <div class="mui-media-body content">小小</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp27.jpg">
+				            <div class="mui-media-body content">校长</div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/index_avatar2.jpg">
+				            <div class="mui-media-body content">学霸</div>
+				        </a>
+				    </li>
+
+				</ul>
+				<li data-group="Y" class="mui-table-view-divider mui-indexed-list-group">Y</li>
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../images/friends/tp28.jpg">
+				            <div class="mui-media-body content">樱子</div>
+				        </a>
+				    </li>
+				</u1>
+			</ul>
+		</div>
+	</div>
+</div>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.indexedlist.js"></script>
+<script type="text/javascript" charset="utf-8">
+	mui.init();
+
+	mui.ready(function() {
+		//var header = document.querySelector('header.mui-bar');
+		var list = document.getElementById('list');
+		//calc hieght
+		list.style.height = document.body.offsetHeight + 'px';
+		//create
+		window.indexedList = new mui.IndexedList(list);
+
+	});
+</script>
+</body>
+
+</html>

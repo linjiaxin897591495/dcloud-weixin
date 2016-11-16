@@ -1,0 +1,15 @@
+.top-bar{
+	background:#363636;
+}
+#title{
+	color:white;
+}
+.mui-active .mui-icon,.mui-active .mui-tab-label{color: #16af16;}
+.icon-jia{color: white;}
+.content{
+	padding: 10px auto;
+	margin-top: 10px;
+}
+.icon-font{
+	font-size: 30px;
+}

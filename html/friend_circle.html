@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>朋友圈</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../css/mui.min.css">
+<link rel="stylesheet" href="../css/circle.css">
+<style type="text/css">
+	.mui-preview-image.mui-fullscreen {
+		position: fixed;
+		z-index: 20;
+		background-color: #000;
+	}
+	.mui-preview-header,
+	.mui-preview-footer {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: 10;
+	}
+	.mui-preview-header {
+		height: 44px;
+		top: 0;
+	}
+	.mui-preview-footer {
+		height: 50px;
+		bottom: 0px;
+	}
+	.mui-preview-header .mui-preview-indicator {
+		display: block;
+		line-height: 25px;
+		color: #fff;
+		text-align: center;
+		margin: 15px auto 4;
+		width: 70px;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 12px;
+		font-size: 16px;
+	}
+	.mui-preview-image {
+		display: none;
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	.mui-preview-image.mui-preview-in {
+		-webkit-animation-name: fadeIn;
+		animation-name: fadeIn;
+	}
+	.mui-preview-image.mui-preview-out {
+		background: none;
+		-webkit-animation-name: fadeOut;
+		animation-name: fadeOut;
+	}
+	.mui-preview-image.mui-preview-out .mui-preview-header,
+	.mui-preview-image.mui-preview-out .mui-preview-footer {
+		display: none;
+	}
+	.mui-zoom-scroller {
+		position: absolute;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		-webkit-backface-visibility: hidden;
+	}
+	.mui-zoom {
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+	.mui-slider .mui-slider-group .mui-slider-item img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+		width: 100%;
+	}
+	.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+		display: inline-table;
+	}
+	.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.mui-preview-loading {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	.mui-preview-loading.mui-active {
+		display: block;
+	}
+	.mui-preview-loading .mui-spinner-white {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -25px;
+		margin-top: -25px;
+		height: 50px;
+		width: 50px;
+	}
+	.mui-preview-image img.mui-transitioning {
+		-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+	.mui-content-padded{
+		margin: 0px;
+	}
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@-webkit-keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+</style>
+</head>
+<body>
+<div style="margin:0 auto;display:none;">
+<img class="data-avt" src="../images/0.jpg">
+</div>
+<header>
+<img id="bg" src="../images/yuantiao.png">
+<p id="user-name" class="data-name">三秋树</p>
+<img id="avt" class="data-avt" src="../images/index_avatar4.jpg">
+</header>
+<div id="main">
+<div id="list">
+	<ul>
+		<li>
+			<div class="po-avt-wrap">
+				<img class="po-avt data-avt" src="../images/index_avatar1.jpg">
+			</div>
+			<div class="po-cmt">
+				<div class="po-hd">
+					<p class="po-name">田</p>
+					<p class="post">这个实训有点意思。</p>
+					<p class="time">刚刚</p><img class="c-icon" src="../images/c.png">
+				</div>
+				<div class="r"></div>
+				<div class="cmt-wrap">
+					<div class="like">
+						<a href="">
+							<img src="../images/l.png">
+						</a>
+						<b class="data-name">三秋树，高俊峰，梅子，宋老师，班主任，Venus</b>
+					</div>
+					<div class="cmt-list">
+						<p><span>高俊峰：</span>受益匪浅。</p>
+						<p><span>三秋树：</span>我就不说话了。</p>
+						<p><span>宋老师：</span>非常好</p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="po-avt-wrap">
+				<img class="po-avt data-avt" src="../images/index_avatar2.jpg">
+			</div>
+			<div class="po-cmt">
+				<div class="po-hd">
+					<p class="po-name"><span class="data-name">高俊峰</span></p>
+					<div class="post">
+						<p>两天高仿出一个微信APP，觉得自己好厉害。</p>
+						<p class="mui-content-padded">
+							<img class="list-img" src="../images/friends/leap.jpeg" style="height: 80px;" data-preview-src="" data-preview-group="1" >
+						</p>
+					</div>
+					<p class="location">湛江·岭南师范学院</p>
+					<p class="time">3分钟前</p><img class="c-icon" src="../images/c.png">
+				</div>
+				<div class="r"></div>
+				<div class="cmt-wrap">
+					<div class="like"><img src="../images/l.png">
+					<b class="data-name">高俊峰，三秋树，田，梅子...</b>
+				</div>
+					<div class="cmt-list">
+						<p><span>高俊峰：</span>自己给自己点赞</p>
+						<p><span>三秋树：</span>好厉害的样子</p>
+						<p><span>梅子：</span>不错</p>
+						<p>
+							<span class="data-name">高俊峰</span>
+							回复
+							<span>三秋树</span>
+							<span>：</span>那是
+						</p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="po-avt-wrap">
+				<img class="po-avt" src="../images/index_avatar4.jpg">
+			</div>
+			<div class="po-cmt">
+				<div class="po-hd">
+					<p class="po-name">三秋树</p>
+					<p class="post">
+						求赞。
+						<p class="mui-content-padded">
+							<img class="list-img" src="../images/friends/giraffe.jpeg" style="height: 80px;" data-preview-src="" data-preview-group="2" >
+							<img class="list-img" src="../images/friends/kangaroo.jpeg" style="height: 80px;" data-preview-src="" data-preview-group="2" >
+							<img class="list-img data-avt" src="../images/friends/songshu.jpeg" style="height: 80px;" data-preview-src="" data-preview-group="2" >
+						</p>
+					</p>
+					<p class="time">52分钟前</p>
+					<img class="c-icon" src="../images/c.png">
+				</div>
+				<div class="r"></div>
+				<div class="cmt-wrap">
+					<div class="like">
+						<img src="../images/l.png">
+						<b class="data-name">田，高俊峰，梅子，Lily，铃木，班主任，妈妈，表哥</b>
+					</div>
+					<div class="cmt-list">
+						<p><span>Jack：</span>手动点赞。</p>
+						<p><span>小小：</span>好可爱。</p>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.zoom.js"></script>
+<script src="../js/mui.previewimage.js"></script>
+<script>
+mui.init({
+	pullRefresh: {
+		container: 'ul',
+		down: {
+			callback: pulldownRefresh
+		},
+		up: {
+			contentrefresh: '正在加载...',
+			contentnomore:'',
+			callback: pullupRefresh
+		}
+	}
+});
+var names=new Array("Lily","Lucy","小南","金星","Venus","Jack","田中先生","姐姐","Joe","宋老师",
+	"班主任","肖丽姐","学霸","煞笔","小田田","金姐","梁哥","梅老师","小小","王生",
+	"Michael","Bieber","铃木","樱子","校长","梅子","大宝","John","大嫂","吴总","Lily","Lucy","小南","金星","Venus","Jack","田中先生","姐姐","Joe","宋老师",
+	"班主任","肖丽姐","学霸","煞笔","小田田","金姐","梁哥","梅老师","小小","王生",
+	"Michael","Bieber","铃木","樱子","校长","梅子","大宝","John","大嫂","吴总");
+var contents=new Array("今天天气真好。","Just do it.","泥煤","哼","准备吃土",
+	"欧哥送我mini就直播吃屎！","今天上的课真烧脑。","双十一要来啦","一脸傲娇","OK？",
+	"真的，就是这样","大家对关于简历、面试方面的问题，可以找我聊聊。","联系我65657","吊炸天","呵呵",
+	"你若安好，便是晴天","每次搜索都是未知的开始。","同学们要认真听课","老师讲的我都不屑听。","双十二也不远了",
+	"Well done.","Good job.","おはよう","かわいそう","革命尚未成功，同志们仍需努力！",
+	"联系我请用qq或qq邮箱","搞笑吗？","Nothing is impossible.","张同学，回家吃饭了","今晚加班","今天天气真好。","Just do it.","泥煤","哼","准备吃土",
+	"欧哥送我mini就直播吃屎！","今天上的课真烧脑。","老师讲的我都不屑听。","一脸傲娇","OK？",
+	"真的，就是这样","大家对关于简历、面试方面的问题，可以找我聊聊。","联系我65657","吊炸天","呵呵",
+	"你若安好，便是晴天","每次搜索都是未知的开始。","同学们要认真听课","双十一要来啦","双十二也不远了",
+	"Well done.","Good job.","おはよう","かわいそう","革命尚未成功，同志们仍需努力！",
+	"联系我请用qq或qq邮箱","搞笑吗？","Nothing is impossible.","张同学，回家吃饭了","今晚加班");
+/**
+ * 下拉刷新具体业务实现
+ */
+function pulldownRefresh() {
+	setTimeout(function() {
+		var ul = document.body.querySelector('ul');
+		var cells = document.body.querySelectorAll('li');
+		for (var i = cells.length, len = i + 3; i < len; i++) {
+			var li = document.createElement('li');
+			//li.className = 'mui-table-view-cell';
+			li.innerHTML = '<div class="po-avt-wrap"><img class="po-avt" src="../images/friends/tp' + (i + 1) + '.jpg"></div>'+
+			'<div class="po-cmt">'+
+				'<div class="po-hd">'+
+					'<p class="po-name">'+names[i]+'</p>'+
+					'<p class="post">'+contents[i]+'</p>'+
+					'<p class="time">刚刚</p><img class="c-icon" src="../images/c.png">'+
+				'</div>'+
+			'</div>';
+			//下拉刷新，新纪录插到最前面；
+			ul.insertBefore(li, ul.firstChild);
+		}
+		mui('ul').pullRefresh().endPulldownToRefresh(); //refresh completed
+	}, 300);
+}
+var count = 0;
+/**
+ * 上拉加载具体业务实现
+ */
+function pullupRefresh() {
+	setTimeout(function() {
+		mui('ul').pullRefresh().endPullupToRefresh((++count > 30)); //参数为true代表没有更多数据了。
+		var ul = document.body.querySelector('ul');
+		var cells = document.body.querySelectorAll('li');
+		for (var i = cells.length, len = i + 2; i < len; i++) {
+			var li = document.createElement('li');
+			li.innerHTML = '<div class="po-avt-wrap"><img class="po-avt" src="../images/friends/tp' + (i + 1) + '.jpg"></div>'+
+			'<div class="po-cmt">'+
+				'<div class="po-hd">'+
+					'<p class="po-name">'+names[i]+'</p>'+
+					'<p class="post">'+contents[i]+'</p>'+
+					'<p class="time">'+(i + 1)+'小时前</p><img class="c-icon" src="../images/c.png">'+
+				'</div>'+
+			'</div>';
+			ul.appendChild(li);
+		}
+	}, 300);
+}
+if (mui.os.plus) {
+	mui.plusReady(function() {
+		setTimeout(function() {
+			mui('ul').pullRefresh().pullupLoading();
+		}, 1000);
+
+	});
+} else {
+	mui.ready(function() {
+		mui('ul').pullRefresh().pullupLoading();
+	});
+}
+
+mui.previewImage();
+</script>
+</html>

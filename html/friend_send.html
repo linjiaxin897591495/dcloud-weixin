@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<style type="text/css">
+	.back{
+		font-size: 16px!important;
+		color: white;
+		margin-top: 6px;
+	}
+	.mui-media .mui-table-view-cell{
+		line-height: 10px;
+		max-height: 20px;
+		padding-top: -20px;
+		margin-top: -20px;
+		padding-top: -20px;
+		height: 25px;
+	}
+	.mui-table-view-cell>a:not(.mui-btn){
+		margin: -20px -10px;
+	}
+	/*.content{
+		margin-top: -50px;
+	}*/
+</style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav top-bar">
+	<h1 id="title" class="mui-title">发送文字</h1>
+	<a class="mui-action-back mui-icon mui-pull-left back">取消</a>
+	<span class="mui-icon mui-pull-right" style="color: green;font-size: 17px;padding-top: 15px;" id="send">发送</span>
+</header>
+
+<textarea name="" rows="9" cols="" style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid;"></textarea>
+<ul class="mui-table-view" style="margin-top: -20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <span class="mui-media-object mui-pull-left iconfont icon-ordinaryjingxiaoshang"></span>
+            <div class="mui-media-body content">所在位置</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <span class="mui-media-object mui-pull-left iconfont icon-shuikeyikan"></span>
+            <span style="float: right;padding: 10px 20px 0 0;">公开</span>
+            <div class="mui-media-body content">谁可以看</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <span class="mui-media-object mui-pull-left iconfont icon-tixingshuikan"></span>
+            <div class="mui-media-body content">提醒谁看</div>
+        </a>
+    </li>
+</ul>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+//发朋友圈
+document.getElementById("send").addEventListener("tap",function () {
+	mui.openWindow({
+		url:"friend_send.html",
+		id:"friend_send.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		}
+	});
+});
+</script>
+</body>
+
+</html>

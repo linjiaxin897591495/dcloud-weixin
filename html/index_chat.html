@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/chat.css">
+<style>
+.back{
+	font-size: 16px!important;
+	color: white;
+	margin-top: 6px;
+}
+.content{
+	margin-top: 0px;
+}
+.box{
+	margin-bottom: 50px;
+}
+.mui-active .mui-icon, .mui-active .mui-tab-label{
+	color: #797979;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+	background-color: white;
+	border-right:0px;
+	border-bottom:0px;
+	font-size: small;
+}
+</style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav top-bar">
+	<h1 id="title" class="mui-title"></h1>
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back">微信</a>
+</header>
+<div class="box chat" style="padding-top: 45px;">  
+    <div class="box_hd"></div>
+       <div class="box_bd" id="chatMsg">  
+        <!--<div class="message me">  
+            <img class="avatar" src="../images/index_avatar4.jpg" />  
+            <div class="content">
+                <div class="bubble bubble_primary right">  
+                    <div class="bubble_cont">  
+                        <div class="plain">  
+                            <pre>你欠我一顿大餐</pre>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>
+        <div class="message">  
+            <img class="avatar" src="../images/index_avatar1.jpg" />  
+            <div class="content"> 
+                <div class="bubble bubble_default left">  
+                    <div class="bubble_cont">  
+                        <div class="plain">  
+                            <pre>(⊙o⊙)…好吧</pre>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="message me">  
+            <img class="avatar" src="../images/index_avatar4.jpg" />  
+            <div class="content"> 
+                <div class="bubble bubble_primary right no_arrow">  
+                    <div class="bubble_cont">  
+                        <div class="picture">  
+                            <img class="msg-img" src="../images/757148912879223578.jpg">
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>
+        <div class="message">  
+            <img class="avatar" src="../images/index_avatar1.jpg" />  
+            <div class="content"> 
+                <div class="bubble bubble_default left">  
+                    <div class="bubble_cont">  
+                        <div class="plain">  
+                            <pre>请你吃一个月的大餐！</pre>
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>-->
+    </div>
+</div> 
+
+<nav class="mui-bar mui-bar-tab">
+	<span class="mui-icon iconfont icon-yuyin" style="width: 5%;float: left;margin: 5px;"></span>
+	<span class="mui-icon iconfont icon-jia jia" id="jia" style="width: 5%;float: right;margin: 5px 10px 5px 5px;color: #777777;"></span>
+	<span class="mui-icon iconfont icon-biaoqing" style="width: 5%;float: right;margin: 5px;color: #777777;"></span>
+	<input type="text" id="txtWord" style="width: 74%;float: right;margin: 5px 0;" onkeydown="KeyBoardPress()" onclick="inputClick()">
+		<div class="mui-content" id ="content" style="display: none;">
+			<div id="Gallery" class="mui-slider" style="margin-top:15px;">
+				<div class="mui-slider-group" id="galleryGroup">
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#" onclick="galleryImg()">
+									<span class="mui-icon iconfont icon-xiangce-copy"></span>
+									<div class="mui-media-body">照片</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#" onclick="captureImage()">
+									<span class="mui-icon iconfont icon-iconfontpaizhao"></span>
+									<div class="mui-media-body">拍摄</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-xiaoshipin"></span>
+									<div class="mui-media-body">小视频</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-shipin"></span>
+									<div class="mui-media-body">视频聊天</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-hongbao"></span>
+									<div class="mui-media-body">红包</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-weixinzhanghuzhuye226"></span>
+									<div class="mui-media-body">转账</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-ordinaryjingxiaoshang"></span>
+									<div class="mui-media-body">位置</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-dongtaiyemianxiaotubiao03"></span>
+									<div class="mui-media-body">收藏</div>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-gerenxinxixingming"></span>
+									<div class="mui-media-body">个人名片</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-yuyinliaotian"></span>
+									<div class="mui-media-body">语音输入</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<span class="mui-icon iconfont icon-qiabao"></span>
+									<div class="mui-media-body">卡券</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>
+</nav>
+<script src="../js/mui.min.js"></script>
+<script src="../js/arttmpl.js"></script>
+<script type="text/javascript">
+mui.plusReady(function(){
+	var self=plus.webview.currentWebview();
+	var title= self.title;
+	document.querySelector("#title").innerText=title;
+});
+
+//点击加
+var jia=document.getElementById("jia");
+var content=document.getElementById("content");
+jia.addEventListener("tap",function () {
+	if(content.style.display=='none'){
+		content.style.display="block";
+	}else{
+		content.style.display='none';
+	}
+});
+
+//点击输入框隐藏功能内容
+function inputClick(event){
+	if(content.style.display=='block'){
+		content.style.display="none";
+	}
+		location.hash="#fa";   
+	console.log('dsf');
+}
+
+//机器人回复
+function toRobot(info) {
+	var apiUrl = 'http://www.tuling123.com/openapi/api';
+	mui.getJSON(apiUrl, {
+		"key": 'acfbca724ea1b5db96d2eef88ce677dc',
+		"info": info,
+		"userid": plus.device.uuid
+	}, function(data) {
+//		alert(JSON.stringify(data));
+		var chatMsg = document.getElementById("chatMsg");
+		var html = "<div class='message'>"+
+            "<img class='avatar' src='../images/index_avatar1.jpg' />"+
+            "<div class='content'>"+
+                "<div class='bubble bubble_primary right'>"+
+                    "<div class='bubble_cont'>"+
+                        "<div class='plain' id='ds'>"+ 
+                            "<pre>"+data.text+"</pre>"+ 
+                        "</div>"+
+                    "</div>"+
+                "</div>"+
+            "</div>"+
+        "</div>";
+        chatMsg.innerHTML = chatMsg.innerHTML + html;
+        window.location.hash="ds";//定位锚点
+	});
+};
+
+//点击发送
+function KeyBoardPress(event){
+	if(content.style.display=='block'){
+		content.style.display="none";
+	}
+	if(window.event.keyCode == '13'){
+		//获取输入框对象
+		var txtWord = document.getElementById("txtWord");
+		//获取消息框对象
+		var chatMsg = document.getElementById("chatMsg");
+		//拼接聊天信息
+		var html = "<div class='message me'>"+
+            "<img class='avatar' src='../images/index_avatar4.jpg' />"+
+            "<div class='content'>"+
+                "<div class='bubble bubble_primary right'>"+
+                    "<div class='bubble_cont'>"+
+                        "<div class='plain' id='ds'>"+ 
+                            "<pre>"+txtWord.value+"</pre>"+ 
+                        "</div>"+
+                    "</div>"+
+                "</div>"+
+            "</div>"+
+        "</div>";
+        window.location.hash="ds";//定位锚点
+    	chatMsg.innerHTML = chatMsg.innerHTML + html;
+    	document.querySelector('#txtWord').blur();
+    	toRobot(txtWord.value);
+    	txtWord.value='';//清空输入框内容
+	}
+}
+
+//从相册选择
+function galleryImg(){
+	content.style.display="none";//隐藏功能区
+	// 从相册中选择图片
+	console.log("从相册中选择多张图片:");
+	var chatMsg = document.getElementById("chatMsg");
+    plus.gallery.pick( function(e){
+    	for(var i in e.files){
+	    	console.log(e.files[i]);
+			var html = "<div class='message me'>"+
+	            "<img class='avatar' src='../images/index_avatar4.jpg' />"+
+	            "<div class='content'>"+
+	                "<div class='bubble bubble_primary right'>"+
+	                    "<div class='bubble_cont'>"+
+	                        "<div class='picture'>"+ 
+	                            "<img class='msg-img' src='"+e.files[i]+"'>"+ 
+	                        "</div>"+
+	                    "</div>"+
+	                "</div>"+
+	            "</div>"+
+	        "</div>"
+	    	chatMsg.innerHTML = chatMsg.innerHTML + html;
+    	}
+    }, function (e){
+    	console.log( "取消选择图片" );
+    },{filter:"image",multiple:true});
+}
+
+// 拍照
+function captureImage(){
+	content.style.display="none";//隐藏功能区
+	var cmr = plus.camera.getCamera();  
+    cmr.captureImage(function(p) {  
+        plus.io.resolveLocalFileSystemURL(p, function(entry) {  
+			var html = "<div class='message me'>"+
+	            "<img class='avatar' src='../images/index_avatar4.jpg' />"+
+	            "<div class='content'>"+
+	                "<div class='bubble bubble_primary right'>"+
+	                    "<div class='bubble_cont'>"+
+	                        "<div class='picture'>"+ 
+	                            "<img class='msg-img' src='"+entry.fullPath+"'>"+ 
+	                        "</div>"+
+	                    "</div>"+
+	                "</div>"+
+	            "</div>"+
+	        "</div>"
+	    	chatMsg.innerHTML = chatMsg.innerHTML + html;
+        }, function(e) {  
+            alert(e.message);  
+        });  
+    }, function(e) {}, {
+        filename: "_doc/camera/"  
+    });
+}
+
+//mui('#galleryGroup').on('tap', 'a', function() {
+//	var id = this.getAttribute('href');
+//	var href = this.href;
+//	alert('dsf');
+//});
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,275 @@
+{
+	"index.html": {
+		"resources": [
+			"html/index.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"css/common.css"
+		],
+		"refer": [
+			"html/index.html",
+			"html/contact.html",
+			"html/find.html",
+			"html/me.html"
+		]
+	},
+	"html/index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/index_avatar1.jpg",
+			"images/index_avatar2.jpg",
+			"images/index_avatar3.jpg",
+			"images/friends/tp24.jpg",
+			"images/friends/tp8.jpg",
+			"images/friends/tp4.jpg"
+		],
+		"refer": [
+			"html/index_chat.html"
+		]
+	},
+	"html/contact.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js",
+			"css/iconfont.css",
+			"images/index_avatar1.jpg",
+			"images/index_avatar2.jpg",
+			"images/index_avatar3.jpg",
+			"fonts/iconfont.ttf",
+			"css/common.css",
+			"images/afs.png",
+			"images/a_b.png",
+			"images/biaoqian.png",
+			"images/a_j.png",
+			"images/a_h.png",
+			"images/friends/tp25.jpg",
+			"images/friends/tp2.jpg",
+			"images/friends/tp18.jpg",
+			"images/friends/tp16.jpg",
+			"images/friends/tp8.jpg",
+			"images/friends/tp1.jpg",
+			"images/friends/tp11.jpg",
+			"images/friends/tp10.jpg",
+			"images/index_avatar4.jpg",
+			"images/friends/tp27.jpg",
+			"images/friends/tp3.jpg",
+			"images/friends/tp22.jpg",
+			"images/friends/tp14.jpg",
+			"images/friends/tp21.jpg",
+			"images/friends/tp6.jpg",
+			"images/friends/tp4.jpg",
+			"images/friends/tp5.jpg",
+			"images/friends/tp28.jpg",
+			"images/friends/tp7.jpg",
+			"images/friends/tp9.jpg",
+			"images/friends/tp12.jpg",
+			"images/friends/tp15.jpg",
+			"images/friends/tp19.jpg",
+			"images/friends/tp24.jpg",
+			"images/friends/tp20.jpg",
+			"images/friends/tp17.jpg",
+			"images/friends/tp23.jpg",
+			"images/friends/tp26.jpg",
+			"images/friends/tp13.jpg"
+		]
+	},
+	"html/find.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/index_avatar1.jpg",
+			"images/index_avatar2.jpg",
+			"images/index_avatar3.jpg",
+			"css/common.css",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"fonts/mui.ttf",
+			"images/afp.png",
+			"images/aff.png",
+			"images/afy.png",
+			"images/afs.png",
+			"images/afpl.png",
+			"images/afyx.png",
+			"images/afg.png"
+		],
+		"refer": [
+			"html/friend_circle.html",
+			"html/friend_shake.html",
+			"html/friend_index.html"
+		]
+	},
+	"html/me.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/index_avatar1.jpg",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"images/index_avatar4.jpg",
+			"images/afy.png",
+			"images/afs.png",
+			"images/afp.png",
+			"images/ak_.png",
+			"images/akc.png",
+			"images/akb.png",
+			"images/ak2.png",
+			"images/aka.png",
+			"images/akd.png"
+		],
+		"refer": [
+			"html/me_info.html"
+		]
+	},
+	"html/index_chat.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"css/common.css",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"css/chat.css",
+			"images/757148912879223578.jpg",
+			"images/index_avatar1.jpg",
+			"images/index_avatar4.jpg",
+			"js/arttmpl.js"
+		]
+	},
+	"html/friend_circle.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"images/index_avatar1.jpg",
+			"images/index_avatar2.jpg",
+			"images/index_avatar3.jpg",
+			"images/yuantiao.jpg",
+			"images/yuantiao.png",
+			"images/index_avatar4.jpg",
+			"images/0.jpg",
+			"app.css",
+			"images/jt1.jpg",
+			"images/c.png",
+			"jquery.min.js",
+			"images/ma1.jpg",
+			"images/n5.jpg",
+			"images/l.png",
+			"images/xa1.jpg",
+			"images/yt3.jpg",
+			"images/bg.jpg",
+			"images/a4.jpg",
+			"images/guide2.png",
+			"images/friend-01.jpg",
+			"js/mui.zoom.js",
+			"html/images/s1_m.jpg",
+			"html/js/photoswipe.min.js",
+			"html/images/s2_m.jpg",
+			"html/js/photoswipe-ui-default.min.js",
+			"html/images/s4_m.jpg",
+			"html/css/photoswipe.css",
+			"html/images/s5.jpg",
+			"html/images/s1.jpg",
+			"html/images/s5_m.jpg",
+			"html/images/s3_m.jpg",
+			"html/images/s2.jpg",
+			"js/mui.previewimage.js",
+			"images/friends/songshu.jpeg",
+			"images/friends/leap.jpeg",
+			"images/friends/giraffe.jpeg",
+			"images/friends/kangaroo.jpeg",
+			"images/friends/tp7.jpg",
+			"css/circle.css",
+			"images/friends/tp8.jpg",
+			"images/friends/tp6.jpg",
+			"images/friends/tp4.jpg",
+			"images/friends/tp5.jpg",
+			"images/friends/tp9.jpg",
+			"images/friends/tp10.jpg",
+			"images/friends/tp12.jpg",
+			"images/friends/tp13.jpg",
+			"images/friends/tp11.jpg",
+			"images/friends/tp17.jpg",
+			"images/friends/tp15.jpg",
+			"images/friends/tp14.jpg",
+			"images/friends/tp18.jpg",
+			"images/friends/tp16.jpg",
+			"images/friends/tp19.jpg",
+			"images/friends/tp21.jpg",
+			"images/friends/tp20.jpg",
+			"images/friends/tp23.jpg",
+			"images/friends/tp24.jpg",
+			"images/friends/tp22.jpg",
+			"images/friends/tp25.jpg",
+			"images/friends/tp27.jpg",
+			"images/friends/tp26.jpg",
+			"images/friends/tp30.jpg",
+			"images/friends/tp29.jpg",
+			"images/friends/tp28.jpg"
+		]
+	},
+	"html/friend_shake.html": {
+		"resources": [
+			"images/shake/1.jpg",
+			"js/common.js",
+			"images/shakedown.png",
+			"images/shakeup.png",
+			"js/immersed.js",
+			"images/shake/3.jpg",
+			"css/shake.css",
+			"images/shake/4.jpg",
+			"css/common.css",
+			"images/friends/wang3.jpg",
+			"images/shake/2.jpg"
+		]
+	},
+	"html/friend_index.html": {
+		"resources": [
+			"html/friend_circle.html",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf"
+		],
+		"refer": [
+			"html/friend_circle.html",
+			"html/friend_send.html"
+		]
+	},
+	"html/me_info.html": {
+		"resources": [
+			"images/index_avatar4.jpg",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf"
+		]
+	},
+	"html/friend_send.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"images/afyx.png",
+			"images/afg.png"
+		]
+	}
+}

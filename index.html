@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>微信</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+	html,
+	body {
+		background-color: #efeff4;
+	}
+
+</style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav top-bar">
+	<h1 id="title" class="mui-title">微信</h1>
+	<a class="mui-icon iconfont icon-jia mui-pull-right"></a>
+	<a class="mui-icon iconfont icon-sousuo mui-pull-right" style="color: white;margin-right: 0px;"></a>
+</header>
+<nav class="mui-bar mui-bar-tab">
+	<a id="defaultTab" class="mui-tab-item mui-active" href="html/index.html">
+		<span class="mui-icon iconfont icon-weixin"><span class="mui-badge">9</span></span>
+		<span class="mui-tab-label">微信</span>
+	</a>
+	<a class="mui-tab-item" href="html/contact.html">
+		<span class="mui-icon iconfont icon-tongxunlu"></span>
+		<span class="mui-tab-label">通讯录</span>
+	</a>
+	<a class="mui-tab-item" href="html/find.html">
+		<span class="mui-icon iconfont icon-faxian"></span>
+		<span class="mui-tab-label">发现</span>
+	</a>
+	<a class="mui-tab-item" href="html/me.html">
+		<span class="mui-icon iconfont icon-wo"></span>
+		<span class="mui-tab-label">我</span>
+	</a>
+</nav>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+//定义子页面url数组
+var supPages= ['html/index.html', 'html/find.html', 'html/me.html'];
+var subPageStyle={
+	top:'44px',
+	bottom:'50px'
+};
+//当mui装置完毕后的回调函数
+mui.plusReady(function(){
+	//获得显示硬件的WebView对象
+	var self = plus.webview.currentWebview();
+	for (var i=0;i<supPages.length;i++){
+		//创建子页面对象
+		var subPage = plus.webview.create(supPages[i],supPages[i],subPageStyle);
+		subPage.hide();
+		//将子页面装载到WebView中
+		self.append(subPage);
+	}
+	//默认
+	plus.webview.show(supPages[0]);
+});
+
+var title = document.getElementById("title");
+//底部导航切换页面
+mui(".mui-bar-tab").on("tap","a",function(){
+	var url= this.getAttribute("href");
+	//更换标题
+	title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+	if(url=="html/contact.html"){
+		mui.openWindow({
+			url:"html/contact.html",
+			id:"html/contact.html",
+			styles:{top:'44px',bottom:'50px'}
+		});
+	}else{
+		if(plus.webview.getWebviewById("html/contact.html")!=null){
+			plus.webview.getWebviewById("html/contact.html").hide();
+		}
+		plus.webview.show(url,"fade-in",100);
+	}	
+    });
+</script>
+</body>
+</html>

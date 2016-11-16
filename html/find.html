@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/common.css">
+<style type="text/css">
+.mui-media{
+	/*height: 45px;*/
+	/*font-size: 15px;*/
+	/*padding: 6px 15px;*/
+	line-height: 26px;
+}
+.mui-table-view .mui-media-object{
+	line-height: 25px;
+	max-height: 25px;
+	height: 25px;
+}
+
+</style>
+</head>
+<body>
+<ul class="mui-table-view" style="margin-top: 10px;">
+    <li class="mui-table-view-cell mui-media" id="friend_circle">
+        <a class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afp.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">朋友圈</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afs.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">扫一扫</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media" id="shake">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afy.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">摇一摇</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/aff.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">附近的人</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afpl.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">漂流瓶</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afg.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">购物</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/afyx.png"/>
+            <div class="mui-media-body content" style="margin-top: 0px;">游戏</div>
+        </a>
+    </li>
+</ul>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+//	mui.init()
+
+//朋友圈
+mui('#friend_circle').on('tap', 'a', function() {
+	mui.openWindow({
+		url:"friend_index.html",
+		id:"friend_index.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		}
+	});
+});
+
+//摇一摇
+mui('#shake').on('tap', 'a', function() {
+	mui.openWindow({
+		url:"friend_shake.html",
+		id:"friend_shake.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		}
+	});
+});
+</script>
+</html>

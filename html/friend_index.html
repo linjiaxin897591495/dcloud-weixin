@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<style type="text/css">
+	.back{
+		font-size: 16px!important;
+		color: white;
+		margin-top: 6px;
+	}
+</style>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav top-bar">
+	<h1 id="title" class="mui-title">朋友圈</h1>
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back">发现</a>
+	<span class="mui-icon iconfont mui-pull-right icon-iconfontpaizhao" style="color: white;font-size: 20px;padding-top: 15px;" id="send"></span>
+</header>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+mui.init({
+    subpages:[{
+      url:'friend_circle.html',//子页面HTML地址，支持本地地址和网络地址
+      id:'friend_circle.html',//子页面标志
+      styles:{
+        top:'44px',//子页面顶部位置
+        bottom:'0px'//子页面底部位置
+      }
+    }]
+  });
+  
+//发朋友圈
+document.getElementById("send").addEventListener("tap",function () {
+	mui.openWindow({
+		url:"friend_send.html",
+		id:"friend_send.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		}
+	});
+});
+</script>
+</body>
+
+</html>

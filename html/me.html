@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/common.css">
+<style type="text/css">
+.mui-media{
+	height: 42px;
+	font-size: 15px;
+	padding-top: 5px;
+}
+.mui-table-view .mui-media-object{
+	max-width: 80px;
+}
+</style>
+</head>
+<body>
+<ul class="mui-table-view" style="margin-top: 20px;">
+	<li class="mui-table-view-cell mui-media" style="height: 90px;padding: 12px 10px 15px 15px;" id="info">
+		<a href="javascript:;" class="mui-navigate-right">
+			<img class="mui-media-object mui-pull-left" src="../images/index_avatar4.jpg" style="height: 65px;width: 65px;float: left;">
+			<div class="mui-media-body" style="padding-top: 12px;font-size: 16px;float: left;">
+				吴耿龙
+				<p class='mui-ellipsis' style="padding-top: 4px;font-size: 14px;color: #000000;">微信号：wugenglong</p>
+			</div>
+			<span class="mui-icon mui-media-object iconfont icon-erweima1" style="width: 20px;float: right;padding: 13px 50px;font-size: 20px;color: #777777;"></span>
+		</a>
+	</li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/ak_.png"/>
+            <div class="mui-media-body content">相册</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/akc.png"/>
+            <div class="mui-media-body content">收藏</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/aka.png"/>
+            <div class="mui-media-body content">钱包</div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/akb.png"/>
+            <div class="mui-media-body content">卡包</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/ak2.png"/>
+            <div class="mui-media-body content">表情</div>
+        </a>
+    </li>
+</ul>
+<ul class="mui-table-view" style="margin-top: 20px;">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="../images/akd.png"/>
+            <div class="mui-media-body content">设置</div>
+        </a>
+    </li>
+</ul>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init();
+	
+//朋友圈
+mui('#info').on('tap', 'a', function() {
+	mui.openWindow({
+		url:"me_info.html",
+		id:"me_info.html",//URL和ID是必须的
+		show:{
+			autoShow:true,
+			aniShow:"slide-in-right",//从右到左
+			duration:100
+		}
+	});
+});
+</script>
+</html>
